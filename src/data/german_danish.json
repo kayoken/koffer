@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "values": ["Baum", "et træ"],
+    "related": []
+  },
+  {
+    "id": 2,
+    "values": ["Auto", "en bil"],
+    "related": []
+  },
+  {
+    "id": 3,
+    "values": ["Fähre", "en færge"],
+    "related": []
+  },
+  {
+    "id": 4,
+    "values": ["Tisch", "et bord"],
+    "related": []
+  },
+  {
+    "id": 5,
+    "values": ["Bücherregal", "en bogreol"],
+    "related": []
+  },
+  {
+    "id": 6,
+    "values": ["Tischbein", "et bordben"],
+    "related": []
+  }
+]
