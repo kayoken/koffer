@@ -1,11 +1,26 @@
-const Card = ({ item }) => {
-  const [activeLanguage, setActiveLanguage] = useState({
+import { useState } from "react";
+
+interface LanguageState {
+  language: number;
+  colored: boolean;
+}
+
+type CardProps = {
+  item: {
+    id: number;
+    values: string[];
+    related: [];
+  };
+};
+
+const Card = ({ item }: CardProps) => {
+  const [activeLanguage, setActiveLanguage] = useState<LanguageState>({
     language: Math.round(Math.random()),
     colored: true,
   });
 
   function handleClick() {
-    setActiveLanguage((prevLanguage) => ({
+    setActiveLanguage((prevLanguage: LanguageState) => ({
       language: prevLanguage.language === 1 ? 0 : 1,
       colored: !prevLanguage.colored,
     }));

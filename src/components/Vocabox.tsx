@@ -1,5 +1,5 @@
 import vocabulary from "../data/german_danish.json";
-import "./styles.css";
+import "../styles/styles.css";
 import { useState } from "react";
 import Card from "./Card";
 import SearchBar from "./Searchbar";
@@ -9,7 +9,7 @@ const Vocabox = () => {
   const [loaded, setLoaded] = useState(true);
 
   // mocking network
-  async function handleFilterText(text) {
+  async function handleFilterText(text: string) {
     setFilterText(() => text);
     if (text.length > 2) {
       setLoaded(false);
@@ -24,7 +24,7 @@ const Vocabox = () => {
     }
   }
 
-  function networkRequest() {
+  function networkRequest(): Promise<void> {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve();
