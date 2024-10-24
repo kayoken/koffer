@@ -9,7 +9,8 @@ type CardProps = {
   item: {
     id: number;
     values: string[];
-    related: [];
+    // expecting references to other items soon
+    related: number[];
   };
 };
 
