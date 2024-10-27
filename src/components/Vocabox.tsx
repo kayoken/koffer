@@ -1,7 +1,7 @@
 import vocabulary from "../resources/german_danish.json";
 import "../styles/styles.css";
 import { useState } from "react";
-import Card from "./Card";
+import Wordlist from "./Wordlist";
 import SearchBar from "./Searchbar";
 
 const Vocabox = () => {
@@ -37,23 +37,7 @@ const Vocabox = () => {
         <SearchBar filterText={filterText} onFilterText={handleFilterText} />
       </div>
       {loaded ? (
-        <div className="cards">
-          {vocabulary
-            .filter((item) => {
-              const lowerCaseFilterText = filterText.toLowerCase();
-              if (filterText.length > 1) {
-                // start filtering only from 2 chars
-                //check if any of the words in the language values array matches
-                return item.values.some((value) =>
-                  value.toLowerCase().includes(lowerCaseFilterText)
-                );
-              }
-              return item;
-            })
-            .map((item) => {
-              return <Card key={item.id} item={item} />;
-            })}
-        </div>
+        <Wordlist filterText={filterText} content={vocabulary} />
       ) : (
         <div>Loading...</div>
       )}
