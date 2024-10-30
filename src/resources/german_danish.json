@@ -1,32 +1,178 @@
 [
   {
     "id": 1,
-    "values": ["Baum", "et træ"],
+    "values": [
+      "Man kann die Brandung hören.",
+      "Man kan høre bølgernes brusen."
+    ],
     "related": []
   },
   {
     "id": 2,
-    "values": ["Auto", "en bil"],
+    "values": ["mein Nachbar", "min nabo"],
     "related": []
   },
   {
     "id": 3,
-    "values": ["Fähre", "en færge"],
+    "values": ["ein Löffel", "en ske"],
     "related": []
   },
   {
     "id": 4,
-    "values": ["Tisch", "et bord"],
+    "values": ["wir müssen an ... denken", "vi skal huske..."],
     "related": []
   },
   {
     "id": 5,
-    "values": ["Bücherregal", "en bogreol"],
+    "values": ["Sie wird einen Ausflug machen", "Hun skal på udflugt."],
     "related": []
   },
   {
     "id": 6,
-    "values": ["Tischbein", "et bordben"],
+    "values": ["50", "halvtreds"],
+    "related": []
+  },
+  {
+    "id": 7,
+    "values": ["den ganzen Weg", "hele vejen"],
+    "related": []
+  },
+  {
+    "id": 8,
+    "values": ["jeden Morgen", "hver morgen"],
+    "related": []
+  },
+  {
+    "id": 9,
+    "values": ["zwei Mal die Woche", "to gange om ugen"],
+    "related": []
+  },
+  {
+    "id": 10,
+    "values": ["30", "tredive"],
+    "related": []
+  },
+  {
+    "id": 11,
+    "values": ["40", "fyrre"],
+    "related": []
+  },
+  {
+    "id": 12,
+    "values": ["sie fragt", "hun spørger"],
+    "related": []
+  },
+  {
+    "id": 13,
+    "values": ["deutlich", "tydelig"],
+    "related": []
+  },
+  {
+    "id": 14,
+    "values": ["40", "fyrre"],
+    "related": []
+  },
+  {
+    "id": 15,
+    "values": ["Glückwunsch!", "Tillykke!"],
+    "related": []
+  },
+  {
+    "id": 16,
+    "values": ["Also ich treibe viel Sport.", "Altså jeg dyrker meget sport."],
+    "related": []
+  },
+  {
+    "id": 17,
+    "values": ["Es ist noch genug Zeit.", "Det er godt nok lang tid."],
+    "related": []
+  },
+  {
+    "id": 18,
+    "values": ["die Gastgeber", "værterne"],
+    "related": []
+  },
+  {
+    "id": 19,
+    "values": ["nah", "tæt på"],
+    "related": []
+  },
+  {
+    "id": 20,
+    "values": ["endlich", "endelig"],
+    "related": []
+  },
+  {
+    "id": 21,
+    "values": ["in die Ferien fahren", "at tage på ferie"],
+    "related": []
+  },
+  {
+    "id": 22,
+    "values": ["90", "halvfems"],
+    "related": []
+  },
+  {
+    "id": 23,
+    "values": ["nur", "kun"],
+    "related": []
+  },
+  {
+    "id": 24,
+    "values": ["40", "fyrre"],
+    "related": []
+  },
+  {
+    "id": 25,
+    "values": [
+      "An der ersten Kreuzung gehst du nach links.",
+      "Ved det første kryds går du til venstre."
+    ],
+    "related": []
+  },
+  {
+    "id": 26,
+    "values": ["ein Boot", "en båd"],
+    "related": []
+  },
+  {
+    "id": 27,
+    "values": ["zwischen", "mellem"],
+    "related": []
+  },
+  {
+    "id": 28,
+    "values": ["Hast Du Zeit am Montag?", "Har du tid på lørdag?"],
+    "related": []
+  },
+  {
+    "id": 29,
+    "values": ["eine Frau", "en kvinde"],
+    "related": []
+  },
+  {
+    "id": 30,
+    "values": ["60", "tres"],
+    "related": []
+  },
+  {
+    "id": 31,
+    "values": ["80", "firs"],
+    "related": []
+  },
+  {
+    "id": 32,
+    "values": ["70", "halvjerds"],
+    "related": []
+  },
+  {
+    "id": 33,
+    "values": ["ich werde/bleibe", "jeg bliver"],
+    "related": []
+  },
+  {
+    "id": 34,
+    "values": ["Das machen wir auch!", "Det gør vi også!"],
     "related": []
   }
 ]

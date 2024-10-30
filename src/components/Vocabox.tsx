@@ -1,34 +1,23 @@
 import vocabulary from "../resources/german_danish.json";
 import "../styles/styles.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Wordlist from "./Wordlist";
 import SearchBar from "./Searchbar";
 
 const Vocabox = () => {
   const [filterText, setFilterText] = useState("");
-  const [loaded, setLoaded] = useState(true);
+  const [loaded, setLoaded] = useState(false);
+
+  // just mocking a loader
+  useEffect(() => {
+    setTimeout(() => {
+      setLoaded(true);
+    }, 500);
+  }, []);
 
   // mocking network
-  async function handleFilterText(text: string) {
+  function handleFilterText(text: string) {
     setFilterText(() => text);
-    setLoaded(false);
-    try {
-      await networkRequest();
-      //set elements
-    } catch (err) {
-      console.log(err);
-    } finally {
-      setLoaded(true);
-    }
-  }
-
-  // mocking the network for now
-  function networkRequest(): Promise<void> {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve();
-      }, 500);
-    });
   }
 
   return (
