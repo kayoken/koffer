@@ -32,15 +32,27 @@ const Card = ({ item }: CardProps) => {
       onClick={() => handleClick()}
       className={"card " + (activeLanguage.colored ? "bright" : "dark")}
     >
-      {item.values[activeLanguage.language]}
-      {/* <button
+      <div className="text-container">
+        {item.values[activeLanguage.language]}
+      </div>
+      <div className="button-container">
+        <button
           onClick={(e) => {
             e.stopPropagation();
             handleChange(item.values[activeLanguage]);
           }}
         >
-          change
-        </button> */}
+          Edit
+        </button>
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            handleChange(item.values[activeLanguage]);
+          }}
+        >
+          Flip
+        </button>
+      </div>
     </div>
   );
 };
