@@ -23,6 +23,7 @@ const Card = ({ item }: CardProps) => {
   });
 
   const [status, setStatus] = useState<string>("viewing");
+  const currentLanguage = activeLanguage.language ? "de" : "dk";
 
   function handleClick() {
     setActiveLanguage((prevLanguage: LanguageState) => ({
@@ -42,9 +43,7 @@ const Card = ({ item }: CardProps) => {
       onClick={() => handleClick()}
       className={"card " + (activeLanguage.colored ? "bright" : "dark")}
     >
-      <div className="text-container">
-        {item.values[activeLanguage.language]}
-      </div>
+      <div className="text-container">{item.values[currentLanguage]}</div>
       <div className="button-container">
         <button
           className="button edit"
