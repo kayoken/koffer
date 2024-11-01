@@ -1,183 +1,290 @@
 [
   {
     "id": 1,
-    "values": [
-      "Man kann die Brandung hören.",
-      "Man kan høre bølgernes brusen."
-    ],
+    "values": {
+      "de": "Man kann die Brandung hören.",
+      "dk": "Man kan høre bølgernes brusen."
+    },
     "related": []
   },
   {
     "id": 2,
-    "values": ["mein Nachbar", "min nabo"],
+    "values": {
+      "de": "mein Nachbar",
+      "dk": "min nabo"
+    },
     "related": []
   },
   {
     "id": 3,
-    "values": ["ein Löffel", "en ske"],
+    "values": {
+      "de": "ein Löffel",
+      "dk": "en ske"
+    },
     "related": []
   },
   {
     "id": 4,
-    "values": ["wir müssen an ... denken", "vi skal huske..."],
+    "values": {
+      "de": "wir müssen an ... denken",
+      "dk": "vi skal huske..."
+    },
     "related": []
   },
   {
     "id": 5,
-    "values": ["Sie wird einen Ausflug machen", "Hun skal på udflugt."],
+    "values": {
+      "de": "Sie wird einen Ausflug machen",
+      "dk": "Hun skal på udflugt."
+    },
     "related": []
   },
   {
     "id": 6,
-    "values": ["50", "halvtreds"],
+    "values": {
+      "de": "50",
+      "dk": "halvtreds"
+    },
     "related": []
   },
   {
     "id": 7,
-    "values": ["den ganzen Weg", "hele vejen"],
+    "values": {
+      "de": "den ganzen Weg",
+      "dk": "hele vejen"
+    },
     "related": []
   },
   {
     "id": 8,
-    "values": ["jeden Morgen", "hver morgen"],
+    "values": {
+      "de": "jeden Morgen",
+      "dk": "hver morgen"
+    },
     "related": []
   },
   {
     "id": 9,
-    "values": ["zwei Mal die Woche", "to gange om ugen"],
+    "values": {
+      "de": "zwei Mal die Woche",
+      "dk": "to gange om ugen"
+    },
     "related": []
   },
   {
     "id": 10,
-    "values": ["30", "tredive"],
+    "values": {
+      "de": "30",
+      "dk": "tredive"
+    },
     "related": []
   },
   {
     "id": 11,
-    "values": ["40", "fyrre"],
+    "values": {
+      "de": "40",
+      "dk": "fyrre"
+    },
     "related": []
   },
   {
     "id": 12,
-    "values": ["sie fragt", "hun spørger"],
+    "values": {
+      "de": "sie fragt",
+      "dk": "hun spørger"
+    },
     "related": []
   },
   {
     "id": 13,
-    "values": ["deutlich", "tydelig"],
+    "values": {
+      "de": "deutlich",
+      "dk": "tydelig"
+    },
     "related": []
   },
   {
     "id": 14,
-    "values": ["40", "fyrre"],
+    "values": {
+      "de": "40",
+      "dk": "fyrre"
+    },
     "related": []
   },
   {
     "id": 15,
-    "values": ["Glückwunsch!", "Tillykke!"],
+    "values": {
+      "de": "Glückwunsch!",
+      "dk": "Tillykke!"
+    },
     "related": []
   },
   {
     "id": 16,
-    "values": ["Also ich treibe viel Sport.", "Altså jeg dyrker meget sport."],
+    "values": {
+      "de": "Also ich treibe viel Sport.",
+      "dk": "Altså jeg dyrker meget sport."
+    },
     "related": []
   },
   {
     "id": 17,
-    "values": ["Es ist noch genug Zeit.", "Det er godt nok lang tid."],
+    "values": {
+      "de": "Es ist noch genug Zeit.",
+      "dk": "Det er godt nok lang tid."
+    },
     "related": []
   },
   {
     "id": 18,
-    "values": ["die Gastgeber", "værterne"],
+    "values": {
+      "de": "die Gastgeber",
+      "dk": "værterne"
+    },
     "related": []
   },
   {
     "id": 19,
-    "values": ["nah", "tæt på"],
+    "values": {
+      "de": "nah",
+      "dk": "tæt på"
+    },
     "related": []
   },
   {
     "id": 20,
-    "values": ["endlich", "endelig"],
+    "values": {
+      "de": "endlich",
+      "dk": "endelig"
+    },
     "related": []
   },
   {
     "id": 21,
-    "values": ["in die Ferien fahren", "at tage på ferie"],
+    "values": {
+      "de": "in die Ferien fahren",
+      "dk": "at tage på ferie"
+    },
     "related": []
   },
   {
     "id": 22,
-    "values": ["90", "halvfems"],
+    "values": {
+      "de": "90",
+      "dk": "halvfems"
+    },
     "related": []
   },
   {
     "id": 23,
-    "values": ["nur", "kun"],
+    "values": {
+      "de": "nur",
+      "dk": "kun"
+    },
     "related": []
   },
   {
     "id": 24,
-    "values": ["40", "fyrre"],
+    "values": {
+      "de": "40",
+      "dk": "fyrre"
+    },
     "related": []
   },
   {
     "id": 25,
-    "values": [
-      "An der ersten Kreuzung gehst du nach links.",
-      "Ved det første kryds går du til venstre."
-    ],
+    "values": {
+      "de": "An der ersten Kreuzung gehst du nach links.",
+      "dk": "Ved det første kryds går du til venstre."
+    },
     "related": []
   },
   {
     "id": 26,
-    "values": ["ein Boot", "en båd"],
+    "values": {
+      "de": "ein Boot",
+      "dk": "en båd"
+    },
     "related": []
   },
   {
     "id": 27,
-    "values": ["zwischen", "mellem"],
+    "values": {
+      "de": "zwischen",
+      "dk": "mellem"
+    },
     "related": []
   },
   {
     "id": 28,
-    "values": ["Hast Du Zeit am Montag?", "Har du tid på lørdag?"],
+    "values": {
+      "de": "Hast Du Zeit am Montag?",
+      "dk": "Har du tid på lørdag?"
+    },
     "related": []
   },
   {
     "id": 29,
-    "values": ["eine Frau", "en kvinde"],
+    "values": {
+      "de": "eine Frau",
+      "dk": "en kvinde"
+    },
     "related": []
   },
   {
     "id": 30,
-    "values": ["60", "tres"],
+    "values": {
+      "de": "60",
+      "dk": "tres"
+    },
     "related": []
   },
   {
     "id": 31,
-    "values": ["80", "firs"],
+    "values": {
+      "de": "80",
+      "dk": "firs"
+    },
     "related": []
   },
   {
     "id": 32,
-    "values": ["70", "halvjerds"],
+    "values": {
+      "de": "70",
+      "dk": "halvjerds"
+    },
     "related": []
   },
   {
     "id": 33,
-    "values": ["ich werde/bleibe", "jeg bliver"],
+    "values": {
+      "de": "ich werde/bleibe",
+      "dk": "jeg bliver"
+    },
     "related": []
   },
   {
     "id": 34,
-    "values": ["Das machen wir auch!", "Det gør vi også!"],
+    "values": {
+      "de": "Das machen wir auch!",
+      "dk": "Det gør vi også!"
+    },
     "related": []
   },
   {
     "id": 35,
-    "values": ["Erdgeschoss, ebenerdig", "nedenunder"],
+    "values": {
+      "de": "Erdgeschoss, ebenerdig",
+      "dk": "nedenunder"
+    },
+    "related": []
+  },
+  {
+    "id": 36,
+    "values": {
+      "de": "eine Reisewarnung",
+      "dk": "en rejseadvarsel"
+    },
     "related": []
   }
 ]

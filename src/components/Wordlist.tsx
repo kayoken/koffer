@@ -3,7 +3,9 @@ import Card from "./Card";
 interface WordlistProps {
   content: {
     id: number;
-    values: string[];
+    values: {
+      [key: string]: string;
+    };
     related?: number[];
   }[];
   filterText: string;
@@ -11,18 +13,18 @@ interface WordlistProps {
 
 const Wordlist = ({ content, filterText }: WordlistProps) => {
   const filteredList = content
-    .filter((word) => {
+    .filter((wordObj) => {
       const lowerCaseFilterText = filterText.toLowerCase();
       if (filterText.length > 1) {
         //check if any of the words in the language values array matches
-        return word.values.some((value) =>
+        return Object.values(wordObj.values).some((value) =>
           value.toLowerCase().includes(lowerCaseFilterText)
         );
       }
-      return word;
+      return wordObj;
     })
-    .map((word) => {
-      return <Card key={word.id} item={word} />;
+    .map((wordObj) => {
+      return <Card key={wordObj.id} item={wordObj} />;
     });
 
   return (
