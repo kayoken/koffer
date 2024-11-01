@@ -1,4 +1,5 @@
 import Card from "./Card";
+import NewCard from "./NewCard";
 
 interface WordlistProps {
   content: {
@@ -9,9 +10,10 @@ interface WordlistProps {
     related?: number[];
   }[];
   filterText: string;
+  dispatch: (action: { type: string }) => void;
 }
 
-const Wordlist = ({ content, filterText }: WordlistProps) => {
+const Wordlist = ({ content, filterText, dispatch }: WordlistProps) => {
   const filteredList = content
     .filter((wordObj) => {
       const lowerCaseFilterText = filterText.toLowerCase();
@@ -29,7 +31,8 @@ const Wordlist = ({ content, filterText }: WordlistProps) => {
 
   return (
     <div className="cards">
-      {filteredList.length > 0 ? filteredList : <span>No words found!</span>}
+      <NewCard dispatch={dispatch} />
+      {filteredList.length > 0 && filteredList}
     </div>
   );
 };

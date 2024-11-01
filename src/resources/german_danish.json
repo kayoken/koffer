@@ -286,5 +286,29 @@
       "dk": "en rejseadvarsel"
     },
     "related": []
+  },
+  {
+    "id": 37,
+    "values": {
+      "de": "Es kann schwer sein, sich zurecht zu finden.",
+      "dk": "Det kan være svært at finde rundt."
+    },
+    "related": []
+  },
+  {
+    "id": 38,
+    "values": {
+      "de": "Fahrradwege",
+      "dk": "cykelstier"
+    },
+    "related": []
+  },
+  {
+    "id": 39,
+    "values": {
+      "de": "ein Balkon",
+      "dk": "en altan"
+    },
+    "related": []
   }
 ]
