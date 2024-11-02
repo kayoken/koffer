@@ -18,7 +18,7 @@ body {
   header {
     padding: 0 1rem;
     position: sticky;
-    height: 100px;
+    height: 65px;
     top: 0;
     width: 100%;
     display: flex;
