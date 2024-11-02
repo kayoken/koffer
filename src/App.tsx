@@ -1,10 +1,10 @@
 import "./App.css";
-import Vocabox from "./components/Vocabox";
+import Koffer from "./components/Koffer";
 
 function App() {
   return (
     <>
-      <Vocabox />
+      <Koffer />
     </>
   );
 }

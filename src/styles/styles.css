@@ -3,23 +3,51 @@
 }
 
 body {
-  font-family: sans-serif;
   padding: 0;
-  background-color: #e2e2e2;
+  background-color: #fff;
   font-weight: 300;
 }
 
 .voc_container {
+  width: 100%;
   flex-direction: column;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
+  header {
+    padding: 0 1rem;
+    position: sticky;
+    height: 100px;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 3;
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0px 6px 12px 0px rgba(106, 115, 129, 0.16),
+      0px 3px 8px 0px rgba(106, 115, 129, 0.06);
+    .header-left {
+      display: flex;
+      align-items: center;
+      h1 {
+        font-size: 1.5rem;
+        font-weight: 200;
+        color: black;
+        margin: 0;
+      }
+    }
+  }
   .cards {
     flex-direction: row;
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    max-width: 1280px;
     flex-wrap: wrap;
+    background-color: #dedede;
+    padding: 1.5rem;
     .card {
       position: relative;
       min-width: 180px;
@@ -31,18 +59,18 @@ body {
       align-items: center;
       justify-content: space-between;
       cursor: grab;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      border-radius: 0.75rem;
       &.bright {
-        background-color: #ecff9d;
-        font-weight: 300;
+        background-color: #fff;
       }
       &.dark {
-        background-color: #f3f3f3;
-        color: #696969;
+        background-color: #000;
+        color: #fff;
       }
       .text-container {
         height: 70%;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         display: flex;
         padding: 1rem;
         justify-content: center;
@@ -51,7 +79,7 @@ body {
       }
       .button-container {
         height: 30%;
-        background-color: #fff;
+        background-color: #000;
         font-size: 1.25rem;
         font-weight: 700;
         display: flex;
@@ -74,7 +102,7 @@ body {
             height: 100%;
           }
           &.edit {
-            border: 2px solid darkgray;
+            border: 1px solid darkgray;
             height: 100%;
             &.new {
               width: 15rem;
