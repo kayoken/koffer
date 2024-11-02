@@ -8,9 +8,25 @@ interface State {
 }
 type StateArray = State[];
 
-type Action = {
+type AddAction = {
+  type: "added";
+  id: number;
+  values: {
+    de: string;
+    dk: string;
+  };
+};
+
+type DeleteAction = {
+  type: "deleted";
+  id: number;
+};
+
+type UnknownAction = {
   type: string;
 };
+
+type Action = AddAction | DeleteAction | UnknownAction;
 
 export function vocabularyReducer(
   state: StateArray = [],
@@ -18,12 +34,29 @@ export function vocabularyReducer(
 ): StateArray {
   switch (action.type) {
     case "added": {
-      return {
+      const addAction = action as AddAction;
+      return [
+        {
+          id: nextId++,
+          values: {
+            de: addAction.values.de,
+            dk: addAction.values.dk,
+          },
+        },
         ...state,
-      };
+      ];
+    }
+    case "deleted": {
+      const deleteAction = action as DeleteAction;
+      return state.filter((item) => {
+        return item.id !== deleteAction.id;
+      });
     }
     default: {
-      throw Error(`Unknown action: ${action.type}`);
+      const unknownAction = action as UnknownAction;
+      throw Error(`Unknown action: ${unknownAction.type}`);
     }
   }
 }
+
+let nextId = 1000;

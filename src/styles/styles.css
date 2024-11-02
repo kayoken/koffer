@@ -69,18 +69,25 @@ body {
           padding: 0.25rem 0.5rem;
           width: 7rem;
           font-weight: 300;
-        }
-        .flip {
-          background-color: #bde810;
-          height: 100%;
-        }
-        .edit {
-          border: 2px solid darkgray;
-          height: 100%;
-          &.new {
-            width: 15rem;
+          &.flip {
+            background-color: #bde810;
+            height: 100%;
+          }
+          &.edit {
+            border: 2px solid darkgray;
+            height: 100%;
+            &.new {
+              width: 15rem;
+            }
           }
         }
+      }
+      .button.delete {
+        border-radius: 0;
+        background-color: #fff;
+        position: absolute;
+        right: 0;
+        padding: 3px 9px;
       }
     }
   }

@@ -26,7 +26,7 @@ const Wordlist = ({ content, filterText, dispatch }: WordlistProps) => {
       return wordObj;
     })
     .map((wordObj) => {
-      return <Card key={wordObj.id} item={wordObj} />;
+      return <Card key={wordObj.id} item={wordObj} dispatch={dispatch} />;
     });
 
   return (

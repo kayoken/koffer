@@ -1,23 +1,34 @@
 interface NewCardProps {
-  dispatch: (action: { type: string }) => void;
+  dispatch: (action: {
+    type: string;
+    values: {
+      de: string;
+      dk: string;
+    };
+  }) => void;
 }
 
+//TODO: hardcoded
 const NewCard = ({ dispatch }: NewCardProps) => {
-  function handleAdd() {
+  function handleAdd(e: React.MouseEvent) {
+    e.stopPropagation();
     dispatch({
       type: "added",
+      values: {
+        de: "Opa",
+        dk: "farfar",
+      },
     });
   }
 
   return (
-    <div onClick={() => handleAdd()} className={"card bright"}>
+    <div onClick={(e) => handleAdd(e)} className={"card bright"}>
       <div className="text-container">+</div>
       <div className="button-container">
         <button
           className="button edit new"
           onClick={(e) => {
-            e.stopPropagation();
-            handleAdd();
+            handleAdd(e);
           }}
         >
           Add

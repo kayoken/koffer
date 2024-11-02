@@ -6,6 +6,7 @@ interface LanguageState {
 }
 
 type CardProps = {
+  dispatch: (action: { type: string; id: number }) => void;
   item: {
     id: number;
     values: {
@@ -16,7 +17,7 @@ type CardProps = {
   };
 };
 
-const Card = ({ item }: CardProps) => {
+const Card = ({ item, dispatch }: CardProps) => {
   const [activeLanguage, setActiveLanguage] = useState<LanguageState>({
     language: Math.round(Math.random()),
     colored: true,
@@ -38,11 +39,24 @@ const Card = ({ item }: CardProps) => {
     );
   }
 
+  function handleDelete() {
+    dispatch({ type: "deleted", id: item.id });
+  }
+
   return (
     <div
       onClick={() => handleClick()}
       className={"card " + (activeLanguage.colored ? "bright" : "dark")}
     >
+      <button
+        className="button delete"
+        onClick={(e) => {
+          e.stopPropagation();
+          handleDelete();
+        }}
+      >
+        x
+      </button>
       <div className="text-container">{item.values[currentLanguage]}</div>
       <div className="button-container">
         <button
