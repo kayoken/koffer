@@ -1,33 +1,3 @@
-interface State {
-  id: number;
-  values: {
-    de: string;
-    dk: string;
-  };
-  related?: number[];
-}
-type StateArray = State[];
-
-type AddAction = {
-  type: "added";
-  id: number;
-  values: {
-    de: string;
-    dk: string;
-  };
-};
-
-type DeleteAction = {
-  type: "deleted";
-  id: number;
-};
-
-type UnknownAction = {
-  type: string;
-};
-
-type Action = AddAction | DeleteAction | UnknownAction;
-
 export function vocabularyReducer(
   state: StateArray = [],
   action: Action
@@ -48,7 +18,7 @@ export function vocabularyReducer(
     }
     case "deleted": {
       const deleteAction = action as DeleteAction;
-      return state.filter((item) => {
+      return state.filter((item: { id: number }) => {
         return item.id !== deleteAction.id;
       });
     }
