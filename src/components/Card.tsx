@@ -1,5 +1,4 @@
 import { useState } from "react";
-import close from "../assets/close.svg";
 
 interface LanguageState {
   language: number;

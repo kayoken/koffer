@@ -36,6 +36,13 @@ const Koffer = () => {
           <SearchBar filterText={filterText} onFilterText={handleFilterText} />
         </div>
       </header>
+      <div
+        style={{
+          height: "25vh",
+          width: "100%",
+          backgroundColor: "beige",
+        }}
+      ></div>
       {loaded ? (
         <Wordlist
           filterText={filterText}
@@ -45,6 +52,12 @@ const Koffer = () => {
       ) : (
         <div>Loading...</div>
       )}
+      <footer
+        style={{
+          height: "4rem",
+          width: "100%",
+        }}
+      ></footer>
     </div>
   );
 };
