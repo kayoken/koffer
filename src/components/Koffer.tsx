@@ -38,7 +38,7 @@ const Koffer = () => {
       </header>
       <div
         style={{
-          height: "25vh",
+          height: "50vh",
           width: "100%",
           backgroundColor: "beige",
         }}
