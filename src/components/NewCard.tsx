@@ -22,7 +22,7 @@ const NewCard = ({ dispatch }: NewCardProps) => {
   }
 
   return (
-    <div onClick={(e) => handleAdd(e)} className={"card bright"}>
+    <div onClick={(e) => handleAdd(e)} className={"card bright new"}>
       <div className="text-container">+</div>
       <div className="button-container">
         <button

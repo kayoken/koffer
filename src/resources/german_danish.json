@@ -77,7 +77,7 @@
       "de": "30",
       "dk": "tredive"
     },
-    "related": []
+    "related": [11, 12]
   },
   {
     "id": 11,
@@ -85,7 +85,7 @@
       "de": "40",
       "dk": "fyrre"
     },
-    "related": []
+    "related": [10, 12]
   },
   {
     "id": 12,
@@ -93,7 +93,7 @@
       "de": "sie fragt",
       "dk": "hun spørger"
     },
-    "related": []
+    "related": [10, 11]
   },
   {
     "id": 13,
