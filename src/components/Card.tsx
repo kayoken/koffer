@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "./Button";
 
 interface LanguageState {
   language: number;
@@ -46,8 +47,8 @@ const Card = ({ item, dispatch }: CardProps) => {
   return (
     <div className={"card " + (activeLanguage.colored ? "bright" : "dark")}>
       <div className="header">
-        <button
-          className="button delete"
+        <Button
+          classes="button delete"
           onClick={(e) => {
             e.stopPropagation();
             handleDelete();
@@ -62,21 +63,21 @@ const Card = ({ item, dispatch }: CardProps) => {
           >
             <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
           </svg>
-        </button>
+        </Button>
       </div>
       <div className="text-container">{item.values[currentLanguage]}</div>
       <div className="button-container">
-        <button
-          className="button edit"
+        <Button
+          classes="button edit"
           onClick={(e) => {
             e.stopPropagation();
             handleChange();
           }}
         >
           Edit
-        </button>
-        <button
-          className="button flip"
+        </Button>
+        <Button
+          classes="button flip"
           onClick={(e) => {
             e.stopPropagation();
             handleClick();
@@ -91,7 +92,7 @@ const Card = ({ item, dispatch }: CardProps) => {
           >
             <path d="M280-120 80-320l200-200 57 56-104 104h607v80H233l104 104-57 56Zm400-320-57-56 104-104H120v-80h607L623-784l57-56 200 200-200 200Z" />
           </svg>
-        </button>
+        </Button>
       </div>
       {status === "changing" && <div>{status}</div>}
     </div>

@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 interface NewCardProps {
   dispatch: (action: {
     type: string;
@@ -25,14 +27,14 @@ const NewCard = ({ dispatch }: NewCardProps) => {
     <div onClick={(e) => handleAdd(e)} className={"card bright new"}>
       <div className="text-container">+</div>
       <div className="button-container">
-        <button
-          className="button edit new"
+        <Button
+          classes="button edit new"
           onClick={(e) => {
             handleAdd(e);
           }}
         >
           Add
-        </button>
+        </Button>
       </div>
     </div>
   );
