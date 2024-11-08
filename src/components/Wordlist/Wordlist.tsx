@@ -1,5 +1,5 @@
-import Card from "./Card";
-import NewCard from "./NewCard";
+import Card from "../Card";
+import NewCard from "../NewCard";
 
 interface WordlistProps {
   content: {

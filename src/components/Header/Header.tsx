@@ -1,5 +1,5 @@
-import logo from "../../koffer.svg";
-import SearchBar from "./Searchbar";
+import logo from "../../../koffer.svg";
+import SearchBar from "../Searchbar";
 
 interface SearchBarProps {
   filterText: string;

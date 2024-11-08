@@ -1,11 +1,11 @@
 import initialVocabulary from "../resources/german_danish.json";
 import "../styles/styles.css";
 import { useEffect, useReducer, useState } from "react";
-import Wordlist from "./Wordlist";
+import Wordlist from "./Wordlist/Wordlist";
 import { vocabularyReducer } from "../reducers/vocabularyReducer";
 import Header from "./Header";
 import Footer from "./Footer";
-import LoadingSpinner from "./LoadingSpinner";
+import LoadingSpinner from "./LoadingSpinner/LoadingSpinner";
 
 const Koffer = () => {
   const [filterText, setFilterText] = useState("");
