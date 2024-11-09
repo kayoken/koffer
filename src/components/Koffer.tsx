@@ -33,13 +33,7 @@ const Koffer = () => {
         filterText={filterText}
         onFilterText={handleFilterText}
       />
-      <div
-        style={{
-          height: "50vh",
-          width: "100%",
-          backgroundColor: "beige",
-        }}
-      ></div>
+      <div className="hero"></div>
       {loaded ? (
         <Wordlist
           filterText={filterText}
