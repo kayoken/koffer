@@ -1,0 +1,38 @@
+:root {
+  --button-color: var(--default-pink);
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: auto;
+  border: var(--border-default);
+  border-radius: 2rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  width: 7rem;
+  font-weight: 300;
+}
+
+button.flip {
+  background-color: var(--button-color);
+}
+
+button.edit {
+  border: var(--border-default);
+  background-color: #fff;
+}
+
+button.edit.new {
+  width: 15rem;
+}
+
+.button.delete {
+  border-radius: 0;
+  background-color: transparent;
+  justify-self: flex-end;
+  width: 3rem;
+  flex: none;
+  border: none;
+}
