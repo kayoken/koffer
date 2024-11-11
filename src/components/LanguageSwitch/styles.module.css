@@ -1,0 +1,11 @@
+.languageSwitch {
+  margin: 1rem;
+}
+
+.languageSwitch span {
+  cursor: pointer;
+}
+
+.active {
+  font-size: 1.25rem;
+}

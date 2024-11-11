@@ -1,12 +1,12 @@
-import React, { createContext, useState, useContext } from "react";
-import { translations } from "../assets/translations";
+import { createContext, useState, useContext } from "react";
+import { translations } from "../resources/translations";
 
-const I18nContext = createContext();
+const I18nContext = createContext(null);
 
 export const I18nProvider = ({ children }) => {
   const [language, setLanguage] = useState("en");
 
-  const translate = (key) => {
+  const translate = (key: string) => {
     return translations[language][key] || key;
   };
 

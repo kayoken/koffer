@@ -1,4 +1,5 @@
 import logo from "../../../koffer.svg";
+import LanguageSwitch from "../LanguageSwitch";
 import SearchBar from "../Searchbar";
 
 interface SearchBarProps {
@@ -19,6 +20,7 @@ const Header = (props: HeaderProps) => {
         <h1>{title}</h1>
       </div>
       <div className="searchfield">
+        <LanguageSwitch />
         <SearchBar filterText={filterText} onFilterText={onFilterText} />
       </div>
     </header>

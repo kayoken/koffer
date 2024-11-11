@@ -25,7 +25,17 @@ const NewCard = ({ dispatch }: NewCardProps) => {
 
   return (
     <div onClick={(e) => handleAdd(e)} className={"card bright new"}>
-      <div className="text-container">+</div>
+      <div className="header"></div>
+
+      <div
+        className="text-container"
+        style={{
+          fontSize: "3rem",
+          fontWeight: "200",
+        }}
+      >
+        +
+      </div>
       <div className="button-container">
         <Button
           classes="button edit new"
