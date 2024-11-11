@@ -1,3 +1,4 @@
+import { useRef, useState, forwardRef, useEffect } from "react";
 import Button from "../Button";
 
 interface NewCardProps {
@@ -10,10 +11,35 @@ interface NewCardProps {
   }) => void;
 }
 
-//TODO: hardcoded
+const Dialog = forwardRef(function Dialog(props, ref) {
+  return (
+    <dialog ref={ref as React.Ref<HTMLDialogElement>}>
+      <form>Add new stuff!</form>
+      <button>Save</button>
+    </dialog>
+  );
+});
+
+//TODO: no hardcode
 const NewCard = ({ dispatch }: NewCardProps) => {
+  const dialogRef = useRef<HTMLDialogElement>(null);
+  const [dialogOpen, setDialogOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (dialogRef.current) {
+      if (dialogOpen) {
+        dialogRef.current.showModal();
+      } else {
+        dialogRef.current.close();
+      }
+    }
+  });
+
   function handleAdd(e: React.MouseEvent) {
+    console.log(dialogOpen);
     e.stopPropagation();
+    setDialogOpen(() => !dialogOpen);
+
     dispatch({
       type: "added",
       values: {
@@ -46,6 +72,7 @@ const NewCard = ({ dispatch }: NewCardProps) => {
           Add
         </Button>
       </div>
+      <Dialog ref={dialogRef} />
     </div>
   );
 };
