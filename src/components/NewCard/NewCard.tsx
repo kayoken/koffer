@@ -11,11 +11,10 @@ interface NewCardProps {
   }) => void;
 }
 
-const Dialog = forwardRef(function Dialog(props, ref) {
-  function handleSubmit() {
-    console.log("works");
-  }
-
+const AddDialog = forwardRef(function Dialog(
+  { onSubmit }: { onSubmit: () => void },
+  ref
+) {
   return (
     <dialog
       style={{
@@ -25,8 +24,8 @@ const Dialog = forwardRef(function Dialog(props, ref) {
     >
       <form
         onSubmit={(e) => {
-          console.log("works");
           e.preventDefault();
+          onSubmit();
         }}
       >
         <h3>Please add new Translations for both sides of the card.</h3>
@@ -56,15 +55,15 @@ const Dialog = forwardRef(function Dialog(props, ref) {
             name="danish"
           />
         </div>
+        <button
+          type="submit"
+          style={{
+            marginTop: "2rem",
+          }}
+        >
+          Add
+        </button>
       </form>
-      <button
-        style={{
-          marginTop: "2rem",
-        }}
-        onClick={handleSubmit}
-      >
-        Submit
-      </button>
     </dialog>
   );
 });
@@ -76,6 +75,7 @@ const NewCard = ({ dispatch }: NewCardProps) => {
 
   useEffect(() => {
     const dialog = dialogRef.current;
+    console.log(dialogOpen);
     if (dialogOpen) {
       dialog?.showModal();
     } else {
@@ -89,8 +89,6 @@ const NewCard = ({ dispatch }: NewCardProps) => {
   }, [dialogOpen]);
 
   function handleAdd() {
-    setDialogOpen(() => !dialogOpen);
-
     dispatch({
       type: "added",
       values: {
@@ -98,6 +96,7 @@ const NewCard = ({ dispatch }: NewCardProps) => {
         dk: "farfar",
       },
     });
+    setDialogOpen(false);
   }
 
   return (
@@ -118,15 +117,13 @@ const NewCard = ({ dispatch }: NewCardProps) => {
           classes="button edit new"
           onClick={(e) => {
             e.stopPropagation();
-            if (!dialogOpen) {
-              handleAdd();
-            }
+            setDialogOpen(true);
           }}
         >
           Add
         </Button>
       </div>
-      <Dialog ref={dialogRef} />
+      <AddDialog onSubmit={handleAdd} ref={dialogRef} />
     </div>
   );
 };
