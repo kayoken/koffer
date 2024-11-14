@@ -12,10 +12,59 @@ interface NewCardProps {
 }
 
 const Dialog = forwardRef(function Dialog(props, ref) {
+  function handleSubmit() {
+    console.log("works");
+  }
+
   return (
-    <dialog ref={ref as React.Ref<HTMLDialogElement>}>
-      <form>Add new stuff!</form>
-      <button>Save</button>
+    <dialog
+      style={{
+        borderRadius: ".75rem",
+      }}
+      ref={ref as React.Ref<HTMLDialogElement>}
+    >
+      <form
+        onSubmit={(e) => {
+          console.log("works");
+          e.preventDefault();
+        }}
+      >
+        <h3>Please add new Translations for both sides of the card.</h3>
+        <div style={{ width: "100%" }}>
+          <label style={{ display: "block" }} htmlFor="german">
+            German
+          </label>
+          <textarea
+            style={{
+              width: "100%",
+            }}
+            rows={5}
+            id="german"
+            name="german"
+          />
+        </div>
+        <div style={{ width: "100%" }}>
+          <label style={{ display: "block" }} htmlFor="danish">
+            Danish
+          </label>
+          <textarea
+            style={{
+              width: "100%",
+            }}
+            rows={5}
+            id="danish"
+            name="danish"
+          />
+        </div>
+      </form>
+      <button
+        style={{
+          marginTop: "2rem",
+        }}
+        onClick={handleSubmit}
+      >
+        Submit
+      </button>
     </dialog>
   );
 });
@@ -26,18 +75,20 @@ const NewCard = ({ dispatch }: NewCardProps) => {
   const [dialogOpen, setDialogOpen] = useState<boolean>(false);
 
   useEffect(() => {
-    if (dialogRef.current) {
-      if (dialogOpen) {
-        dialogRef.current.showModal();
-      } else {
-        dialogRef.current.close();
-      }
+    const dialog = dialogRef.current;
+    if (dialogOpen) {
+      dialog?.showModal();
+    } else {
+      dialog?.close();
     }
-  });
+    return () => {
+      if (dialog?.open) {
+        dialog.close();
+      }
+    };
+  }, [dialogOpen]);
 
-  function handleAdd(e: React.MouseEvent) {
-    console.log(dialogOpen);
-    e.stopPropagation();
+  function handleAdd() {
     setDialogOpen(() => !dialogOpen);
 
     dispatch({
@@ -50,7 +101,7 @@ const NewCard = ({ dispatch }: NewCardProps) => {
   }
 
   return (
-    <div onClick={(e) => handleAdd(e)} className={"card bright new"}>
+    <div className={"card bright new"}>
       <div className="header"></div>
 
       <div
@@ -66,7 +117,10 @@ const NewCard = ({ dispatch }: NewCardProps) => {
         <Button
           classes="button edit new"
           onClick={(e) => {
-            handleAdd(e);
+            e.stopPropagation();
+            if (!dialogOpen) {
+              handleAdd();
+            }
           }}
         >
           Add
