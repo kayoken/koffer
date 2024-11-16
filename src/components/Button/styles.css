@@ -10,9 +10,13 @@ button {
   border: var(--border-default);
   border-radius: 2rem;
   cursor: pointer;
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem 1rem;
   width: 7rem;
-  font-weight: 300;
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
 }
 
 button.flip {
@@ -26,6 +30,10 @@ button.edit {
 
 button.edit.new {
   width: 15rem;
+}
+
+button.add {
+  background-color: var(--button-color);
 }
 
 .button.delete {

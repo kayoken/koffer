@@ -1,3 +1,4 @@
+import "./styles.css";
 import { useRef, useState, forwardRef, useEffect } from "react";
 import Button from "../Button";
 
@@ -16,20 +17,15 @@ const AddDialog = forwardRef(function Dialog(
   ref
 ) {
   return (
-    <dialog
-      style={{
-        borderRadius: ".75rem",
-      }}
-      ref={ref as React.Ref<HTMLDialogElement>}
-    >
+    <dialog ref={ref as React.Ref<HTMLDialogElement>}>
       <form
         onSubmit={(e) => {
           e.preventDefault();
           onSubmit();
         }}
       >
-        <h3>Please add new Translations for both sides of the card.</h3>
-        <div style={{ width: "100%" }}>
+        <h3>Add new translations for both sides of the card.</h3>
+        <div className="input-wrappter">
           <label style={{ display: "block" }} htmlFor="german">
             German
           </label>
@@ -42,7 +38,7 @@ const AddDialog = forwardRef(function Dialog(
             name="german"
           />
         </div>
-        <div style={{ width: "100%" }}>
+        <div className="input-wrapper">
           <label style={{ display: "block" }} htmlFor="danish">
             Danish
           </label>
@@ -55,14 +51,9 @@ const AddDialog = forwardRef(function Dialog(
             name="danish"
           />
         </div>
-        <button
-          type="submit"
-          style={{
-            marginTop: "2rem",
-          }}
-        >
+        <Button type="submit" classes="add">
           Add
-        </button>
+        </Button>
       </form>
     </dialog>
   );

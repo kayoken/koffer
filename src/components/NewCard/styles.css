@@ -1,0 +1,21 @@
+dialog {
+  padding: 3rem;
+  border: var(--border-default);
+  border-radius: 0.75rem;
+}
+
+dialog form label {
+  margin: 2rem 0 1rem;
+  font-weight: 700;
+}
+
+dialog textarea {
+  padding: 1rem;
+  font-size: larger;
+  border: var(--border-default);
+}
+
+.input-wrapper {
+  width: 100%;
+  margin-bottom: 1rem;
+}
