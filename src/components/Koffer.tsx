@@ -1,6 +1,6 @@
 import initialVocabulary from "../resources/german_danish.json";
 import "../styles/styles.css";
-import { useEffect, useReducer, useState } from "react";
+import { useEffect, useReducer, useRef, useState } from "react";
 import Wordlist from "./Wordlist/Wordlist";
 import { vocabularyReducer } from "../reducers/vocabularyReducer";
 import Header from "./Header";
@@ -10,6 +10,7 @@ import LoadingSpinner from "./LoadingSpinner/LoadingSpinner";
 const Koffer = () => {
   const [filterText, setFilterText] = useState("");
   const [loaded, setLoaded] = useState(false);
+  const transitionRef = useRef<HTMLDivElement>(null);
   const [vocabulary, dispatch] = useReducer(
     vocabularyReducer,
     initialVocabulary
@@ -18,6 +19,7 @@ const Koffer = () => {
   //mocking a loader
   useEffect(() => {
     setTimeout(() => {
+      if (transitionRef.current) transitionRef.current.classList.add("loaded");
       setLoaded(true);
     }, 500);
   }, []);
@@ -33,7 +35,12 @@ const Koffer = () => {
         filterText={filterText}
         onFilterText={handleFilterText}
       />
-      <div className="hero"></div>
+      <div ref={transitionRef} className="hero">
+        <div>
+          This Is Koffer. Welcome To a new kind of vocabulary <br />{" "}
+          <span className="skewed">trainer!</span>
+        </div>
+      </div>
       {loaded ? (
         <Wordlist
           filterText={filterText}

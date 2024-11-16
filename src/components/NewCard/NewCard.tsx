@@ -66,7 +66,6 @@ const NewCard = ({ dispatch }: NewCardProps) => {
 
   useEffect(() => {
     const dialog = dialogRef.current;
-    console.log(dialogOpen);
     if (dialogOpen) {
       dialog?.showModal();
     } else {
