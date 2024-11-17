@@ -19,9 +19,14 @@ const Koffer = () => {
   //mocking a loader
   useEffect(() => {
     setTimeout(() => {
-      if (transitionRef.current) transitionRef.current.classList.add("loaded");
       setLoaded(true);
     }, 500);
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (transitionRef.current) transitionRef.current.classList.add("loaded");
+    }, 200);
   }, []);
 
   function handleFilterText(text: string) {
@@ -37,20 +42,29 @@ const Koffer = () => {
       />
       <div ref={transitionRef} className="hero">
         <div>
-          This Is Koffer. Welcome To a new kind of vocabulary <br />{" "}
-          <span className="skewed">trainer!</span>
+          This Is Koffer. <br />
+          A new kind of vocabulary
+          <br /> <span className="skewed">trainer!</span>
         </div>
       </div>
       {loaded ? (
-        <Wordlist
-          filterText={filterText}
-          content={vocabulary}
-          dispatch={dispatch}
-        />
+        <>
+          <Wordlist
+            filterText={filterText}
+            content={vocabulary}
+            dispatch={dispatch}
+          />
+          <Footer />
+        </>
       ) : (
-        <LoadingSpinner />
+        <div
+          style={{
+            minHeight: "50vh",
+          }}
+        >
+          <LoadingSpinner />
+        </div>
       )}
-      <Footer />
     </div>
   );
 };
