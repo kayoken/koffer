@@ -5,7 +5,7 @@ import Wordlist from "./Wordlist/Wordlist";
 import { vocabularyReducer } from "../reducers/vocabularyReducer";
 import Header from "./Header";
 import Footer from "./Footer";
-import LoadingSpinner from "./LoadingSpinner/LoadingSpinner";
+import LoadingSpinner from "./LoadingSpinner";
 
 const Koffer = () => {
   const [filterText, setFilterText] = useState("");
@@ -20,7 +20,7 @@ const Koffer = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoaded(true);
-    }, 500);
+    }, 1000);
   }, []);
 
   useEffect(() => {
@@ -61,6 +61,7 @@ const Koffer = () => {
         </>
       ) : (
         <div
+          className="loading-container"
           style={{
             minHeight: "50vh",
           }}
