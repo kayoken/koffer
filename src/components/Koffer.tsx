@@ -42,7 +42,10 @@ const Koffer = () => {
       />
       <div ref={transitionRef} className="hero">
         <div>
-          This Is Koffer. <br />
+          <span className="hero-text">
+            This Is Koffer.
+            <br />
+          </span>
           A new kind of vocabulary
           <br /> <span className="skewed">trainer!</span>
         </div>
